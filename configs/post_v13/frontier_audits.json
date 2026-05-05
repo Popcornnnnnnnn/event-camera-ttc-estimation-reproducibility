@@ -1,0 +1,35 @@
+{
+  "description": "Post-V13 learned calibration, confidence gate, consistency gate, and audit reproduction commands.",
+  "formal_root_env": "EVTTC_FORMAL_ROOT",
+  "output_root_env": "EVTTC_OUTPUT_ROOT",
+  "commands": [
+    {
+      "name": "learned_calibration_lightgbm",
+      "command": "python Code/scripts/analysis/run_v13_frontier_tabular.py --formal-root ${EVTTC_FORMAL_ROOT} --output-root ${EVTTC_OUTPUT_ROOT}/PostV13Frontier --enable-lightgbm --run-name V13FrontierLGBM_full_v2"
+    },
+    {
+      "name": "confidence_gate",
+      "command": "python Code/scripts/analysis/run_post_v13_confidence_gate.py --output-root ${EVTTC_OUTPUT_ROOT}/PostV13Frontier --run-name V13ConfidenceGate_iqrStd_target6p9_v2 --target-e-ttc-pct 6.9"
+    },
+    {
+      "name": "boundary_audit",
+      "command": "python Code/scripts/analysis/run_post_v13_boundary_audit.py --output-root ${EVTTC_OUTPUT_ROOT}/PostV13Frontier --run-name PostV13BoundaryAudit_v1"
+    },
+    {
+      "name": "traditional_policy_audit",
+      "command": "python Code/scripts/analysis/run_post_v13_traditional_policy_audit.py --output-root ${EVTTC_OUTPUT_ROOT}/PostV13Frontier --run-name PostV13TraditionalPolicyAudit_v1"
+    },
+    {
+      "name": "event_motion_audit",
+      "command": "python Code/scripts/analysis/run_post_v13_event_motion_audit.py --output-root ${EVTTC_OUTPUT_ROOT}/PostV13Frontier --run-name PostV13EventMotionAudit_v1"
+    },
+    {
+      "name": "sequence_consistency_gate",
+      "command": "python Code/scripts/analysis/run_post_v13_consistency_gate.py --output-root ${EVTTC_OUTPUT_ROOT}/PostV13Frontier --run-name V13ConsistencyGate_centerWideSweep_v1 --windows 11 --modes center --targets 6.875"
+    },
+    {
+      "name": "low_observability_audit",
+      "command": "python Code/scripts/analysis/run_post_v13_low_observability_audit.py --output-root ${EVTTC_OUTPUT_ROOT}/PostV13Frontier --run-name PostV13LowObservabilityAudit_v2"
+    }
+  ]
+}

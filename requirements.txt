@@ -1,0 +1,8 @@
+h5py>=3.10
+numpy>=1.26
+
+# Optional experiment families:
+# torch>=2.2              # ML baseline / PyTorch-MPS reruns
+# scikit-learn>=1.4       # Post-V13 audit helpers
+# lightgbm>=4.6           # Post-V13 learned calibration
+# matplotlib>=3.8         # Optional figures; scripts have text/SVG fallbacks where possible

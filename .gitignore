@@ -1,0 +1,111 @@
+# OS / Editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+.codex/
+.claude/
+AGENT_STATE/
+AGENTS.md
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# Logs / temp
+*.log
+logs/
+tmp/
+temp/
+
+# LaTeX build artifacts
+*.aux
+*.bbl
+*.blg
+*.fls
+*.fdb_latexmk
+*.lof
+*.lot
+*.out
+*.toc
+*.xdv
+*.synctex.gz
+*.synctex(busy)
+missfont.log
+
+# Build / cache
+build/
+dist/
+*.egg-info/
+.cache/
+
+# Dataset & large artifacts (do not sync)
+Data/
+data/
+Dataset/
+Dataset-Full/
+dataset/
+Datasets/
+datasets/
+raw_data/
+!Code/scripts/data/
+!Code/scripts/data/**
+Code/scripts/data/__pycache__/
+Code/DatasetFormal/*/
+Code/Derived/**
+Code/Experiments/**
+!Code/Experiments/
+results_summaries/**
+!results_summaries/
+!results_summaries/**/*.csv
+!results_summaries/**/*.json
+!results_summaries/**/*.md
+
+# Private thesis writing and process material are not part of the public release.
+Template/
+Tex/
+Thesis.pdf
+Archive/
+Papers/
+事件相机学习路径.md
+docs/*.md
+docs/active/
+docs/history/
+docs/reference/
+!docs/reproducibility/
+!docs/reproducibility/**
+.planning/
+
+# Embedded repo metadata backup (do not sync)
+**/git_metadata_backup/
+Code/third_party/event_aided_ttc/
+
+# ML artifacts
+checkpoints/
+weights/
+runs/
+outputs/
+results/
+*.ckpt
+*.pt
+*.pth
+*.onnx
+*.h5
+*.npz
+*.npy
+*.bag
+!fixtures/**/*.h5
+
+# Mac Local
+Courses/
+
+# Local literature PDFs
+Papers/*.pdf
+
+# Keep placeholder folders if needed
+!**/.gitkeep

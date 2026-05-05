@@ -1,0 +1,24 @@
+{
+  "description": "ML baseline dataset export and grouped training commands.",
+  "formal_root_env": "EVTTC_FORMAL_ROOT",
+  "ml_dataset_root_env": "EVTTC_ML_DATASET_ROOT",
+  "output_root_env": "EVTTC_OUTPUT_ROOT",
+  "commands": [
+    {
+      "name": "export_multi_tau_polarity_split",
+      "command": "python Code/scripts/data/export_ml_baseline_dataset.py --formal-root ${EVTTC_FORMAL_ROOT} --output-root ${EVTTC_ML_DATASET_ROOT}/.. --tag tau10_20_40_64x64_g3x3_polsplit_all --image-variant multi_tau_polarity_split_v1 --multi-tau-ms 10 20 40 --image-height 64 --image-width 64 --grid-rows 3 --grid-cols 3"
+    },
+    {
+      "name": "numpy_image_only",
+      "command": "python Code/scripts/data/run_ml_baseline_train.py --dataset-root ${EVTTC_ML_DATASET_ROOT} --output-root ${EVTTC_OUTPUT_ROOT}/MlBaseline --model cnn --feature-mode image_only --target log_ttc --run-name TinyCnnImageOnlyV1_AllData_MultiTauPolSplitV1"
+    },
+    {
+      "name": "torch_image_only",
+      "command": "python Code/scripts/data/run_ml_baseline_train_torch.py --dataset-root ${EVTTC_ML_DATASET_ROOT} --output-root ${EVTTC_OUTPUT_ROOT}/MlBaselineTorch --device auto --feature-mode image_only --target log_ttc --cnn-channels 8,12 --cnn-head-hidden-dim 32 --cnn-batch-size 64 --cnn-epochs 120 --cnn-patience 20 --run-name TorchTinyCnnImageOnlyV1_AllData_MultiTauPolSplitV1_Mps"
+    },
+    {
+      "name": "torch_bbox_aux",
+      "command": "python Code/scripts/data/run_ml_baseline_train_torch.py --dataset-root ${EVTTC_ML_DATASET_ROOT} --output-root ${EVTTC_OUTPUT_ROOT}/MlBaselineTorch --device auto --feature-mode image_bbox_aux --aux-metrics-csv ${EVTTC_OUTPUT_ROOT}/SparsityAwareLTS/BBoxLoomingV7_20260427_170415/IntervalMetrics.csv --target log_ttc --cnn-channels 8,12 --cnn-head-hidden-dim 32 --cnn-batch-size 64 --cnn-epochs 120 --cnn-patience 20 --run-name TorchTinyCnnBBoxAuxV1_AllData_MultiTauPolSplitV1_Mps"
+    }
+  ]
+}

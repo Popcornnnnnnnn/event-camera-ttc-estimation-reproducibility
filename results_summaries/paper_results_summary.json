@@ -1,0 +1,15 @@
+{
+  "source": "docs/active/ExperimentResults/UnifiedResultsTable.md",
+  "row_count": 40,
+  "families": {
+    "legacy": 3,
+    "ml": 5,
+    "post_v13": 7,
+    "traditional": 25
+  },
+  "notes": [
+    "All paper-result rows require the full formal dataset or derived full-run outputs for exact reproduction.",
+    "Synthetic fixtures are smoke tests only and are not paper evidence.",
+    "Legacy CMax/STRTTC rows require external legacy kernels supplied via environment variables."
+  ]
+}

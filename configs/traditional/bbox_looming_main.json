@@ -1,0 +1,23 @@
+{
+  "description": "Traditional Quality-Aware BBox Looming TTC reproduction entry points.",
+  "formal_root_env": "EVTTC_FORMAL_ROOT",
+  "output_root_env": "EVTTC_OUTPUT_ROOT",
+  "commands": [
+    {
+      "name": "HeuristicCueV1",
+      "command": "python Code/scripts/data/run_sparsity_aware_lts_eval.py --formal-root ${EVTTC_FORMAL_ROOT} --output-root ${EVTTC_OUTPUT_ROOT}/SparsityAwareLTS --variant HeuristicCueV1"
+    },
+    {
+      "name": "BBoxLoomingV4_no_fallback",
+      "command": "python Code/scripts/data/run_sparsity_aware_lts_eval.py --formal-root ${EVTTC_FORMAL_ROOT} --output-root ${EVTTC_OUTPUT_ROOT}/SparsityAwareLTS --variant BBoxLoomingV4 --disable-lts-fallback"
+    },
+    {
+      "name": "BBoxLoomingV10_no_fallback",
+      "command": "python Code/scripts/data/run_sparsity_aware_lts_eval.py --formal-root ${EVTTC_FORMAL_ROOT} --output-root ${EVTTC_OUTPUT_ROOT}/SparsityAwareLTS --variant BBoxLoomingV10 --disable-lts-fallback"
+    },
+    {
+      "name": "BBoxLoomingV13_no_fallback",
+      "command": "python Code/scripts/data/run_sparsity_aware_lts_eval.py --formal-root ${EVTTC_FORMAL_ROOT} --output-root ${EVTTC_OUTPUT_ROOT}/SparsityAwareLTS --variant BBoxLoomingV13 --disable-lts-fallback"
+    }
+  ]
+}

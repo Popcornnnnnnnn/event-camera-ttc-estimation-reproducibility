@@ -1,0 +1,28 @@
+{
+  "sequence_id": "SYNTH-LOOMING-001",
+  "source_root": "synthetic_fixture",
+  "raw_h5_path": "events.h5",
+  "event_group": "events",
+  "frame_ts_path": "synthetic_frame_timestamps",
+  "label_dir": "synthetic_labels",
+  "ttc_csv_path": "gt_ttc.csv",
+  "gt_h5_path": "",
+  "bbox_source": "synthetic_exponential_bbox",
+  "gt_ttc_source": "analytic_constant_ttc",
+  "label_frame_index_mode": "zero_based",
+  "label_id_range": [
+    0,
+    17
+  ],
+  "label_count": 18,
+  "ttc_row_count": 18,
+  "has_depth": false,
+  "has_pose": false,
+  "frame_delta_us_stats": {
+    "count": 17,
+    "min": 100000,
+    "max": 100000,
+    "mean": 100000.0,
+    "median": 100000.0
+  }
+}

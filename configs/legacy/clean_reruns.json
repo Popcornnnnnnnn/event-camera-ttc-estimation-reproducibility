@@ -1,0 +1,15 @@
+{
+  "description": "Legacy CMax/STRTTC clean direct formal rerun entry points. External legacy kernels are not vendored.",
+  "formal_root_env": "EVTTC_FORMAL_ROOT",
+  "output_root_env": "EVTTC_OUTPUT_ROOT",
+  "external_env": {
+    "EVTTC_CMAX_CORE_PATH": "Path to cmax_aligned_core.py from the CMax clean rerun source",
+    "EVTTC_STRTTC_BASELINES_DIR": "Path to the STRTTC Python baseline directory"
+  },
+  "commands": [
+    {
+      "name": "legacy_clean_full",
+      "command": "EVTTC_CMAX_CORE_PATH=${EVTTC_CMAX_CORE_PATH} EVTTC_STRTTC_BASELINES_DIR=${EVTTC_STRTTC_BASELINES_DIR} python Code/scripts/analysis/run_legacy_clean_rerun.py --formal-root ${EVTTC_FORMAL_ROOT} --output-root ${EVTTC_OUTPUT_ROOT}/LegacyCleanReruns --max-intervals 0 --methods cmax strttc-baseline strttc-quality-aware --max-ttc 25 --cmax-coarse-grid 11 --strttc-max-points 600 --strttc-negative-ttc-policy abs"
+    }
+  ]
+}

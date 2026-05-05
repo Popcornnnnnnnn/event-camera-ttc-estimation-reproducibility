@@ -1,0 +1,15 @@
+{
+  "camera_model": "synthetic_pinhole",
+  "distortion_model": "none",
+  "intrinsics": {
+    "fx": 320.0,
+    "fy": 320.0,
+    "cx": 320.0,
+    "cy": 240.0
+  },
+  "resolution": {
+    "width": 640,
+    "height": 480
+  },
+  "distortion_coeffs": []
+}

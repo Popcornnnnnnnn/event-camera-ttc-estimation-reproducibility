@@ -1,0 +1,18 @@
+{
+  "protocol_name": "EvTTC synthetic formal smoke fixture",
+  "protocol_version": "EvTTC-Formal-v0.1-synthetic",
+  "sequence_time_source": "synthetic",
+  "label_time_source": "synthetic",
+  "label_frame_index_mode": "zero_based",
+  "interval_mode": "adjacent_labels",
+  "interval_definition": "Intervals use adjacent synthetic bbox labels with analytic constant TTC.",
+  "bbox_mode": "xyxy",
+  "bbox_definition": "Centered bbox with exponential size growth so s / ds_dt is approximately constant.",
+  "gt_query_mode": "analytic",
+  "gt_query_definition": "Constant TTC of 2.0 seconds for every smoke interval.",
+  "event_group": "events",
+  "event_slice_policy": "index range from IntervalIndex.csv",
+  "notes": [
+    "Synthetic fixture for public reproducibility smoke tests. Not used for paper metrics."
+  ]
+}
